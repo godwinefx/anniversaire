@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff5f9e">
+  <title>Joyeux anniversaire 🎂</title>
+  <style>
+    :root {
+      --pink: #ff5f9e;
+      --deep: #6d2b78;
+      --cream: #fff8fb;
+      --gold: #ffd166;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #4a235a;
+      background:
+        radial-gradient(circle at 15% 15%, #ffe1ef 0, transparent 32%),
+        radial-gradient(circle at 85% 25%, #e9dcff 0, transparent 30%),
+        linear-gradient(145deg, #fff8fb, #f7eaff);
+    }
+    .wrap {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      padding: 22px 16px 50px;
+      position: relative;
+      z-index: 2;
+    }
+    .topline {
+      text-align: center;
+      font-size: .82rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: #a34b85;
+      font-weight: 800;
+      margin: 10px 0 18px;
+    }
+    .hero {
+      text-align: center;
+      padding: 28px 20px 30px;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 30px;
+      box-shadow: 0 18px 55px rgba(124, 55, 123, .13);
+      backdrop-filter: blur(8px);
+    }
+    .cake {
+      font-size: clamp(4rem, 18vw, 7rem);
+      display: inline-block;
+      filter: drop-shadow(0 8px 12px rgba(255,95,158,.2));
+      animation: bob 2.8s ease-in-out infinite;
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.25rem, 9vw, 4.5rem);
+      line-height: 1.02;
+      margin: 14px 0 12px;
+      color: var(--deep);
+    }
+    h1 span {
+      display: block;
+      color: var(--pink);
+      overflow-wrap: anywhere;
+    }
+    .subtitle {
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+      color: #795b80;
+      font-size: 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 20px;
+      min-height: 48px;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    button:active { transform: scale(.97); }
+    .primary {
+      color: white;
+      background: linear-gradient(100deg, #ff5f9e, #a64de0);
+      box-shadow: 0 9px 22px rgba(206, 72, 157, .28);
+    }
+    .secondary {
+      color: #803d88;
+      background: #f7e8ff;
+      border: 1px solid #ecd4fb;
+    }
+    .card {
+      margin-top: 20px;
+      padding: 24px 22px;
+      border-radius: 25px;
+      background: rgba(255,255,255,.83);
+      box-shadow: 0 12px 35px rgba(124,55,123,.09);
+    }
+    .card h2 {
+      margin: 0 0 12px;
+      font-family: Georgia, serif;
+      font-size: 1.65rem;
+      color: #873f91;
+    }
+    .letter {
+      display: none;
+      line-height: 1.85;
+      font-size: 1.04rem;
+      white-space: pre-line;
+      animation: appear .8s ease both;
+    }
+    .letter.show { display: block; }
+    .signature {
+      margin-top: 18px;
+      color: #e24f92;
+      font-weight: 800;
+    }
+    .hint {
+      margin: 14px 0 0;
+      color: #8e7194;
+      font-size: .84rem;
+      text-align: center;
+    }
+    .balloon {
+      position: fixed;
+      bottom: -140px;
+      z-index: 1;
+      pointer-events: none;
+      font-size: 2.2rem;
+      opacity: .75;
+      animation: floatUp linear forwards;
+    }
+    .sparkle {
+      position: fixed;
+      z-index: 1;
+      pointer-events: none;
+      animation: sparkle 1.3s ease-out forwards;
+    }
+    .footer {
+      text-align: center;
+      padding: 24px 8px 0;
+      font-size: .84rem;
+      color: #9879a0;
+    }
+    .small-note { font-size: .87rem; color: #8c6b93; line-height: 1.6; }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-12px) rotate(2deg); } }
+    @keyframes floatUp { to { transform: translateY(-125vh) rotate(18deg); opacity: 0; } }
+    @keyframes appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes sparkle { 0% { transform: scale(.2) rotate(0); opacity: 0; } 25% { opacity: 1; } 100% { transform: scale(1.6) rotate(100deg); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topline">✨ Une petite surprise rien que pour toi ✨</div>
+    <section class="hero">
+      <div class="cake" aria-hidden="true">🎂</div>
+      <h1>Joyeux anniversaire <span id="nameHeading">Ma personne spéciale</span> 💖</h1>
+      <p class="subtitle">
+        Aujourd'hui est un jour précieux, parce qu'il célèbre l'arrivée au monde d'une personne qui mérite beaucoup de bonheur.
+      </p>
+      <div class="actions">
+        <button class="primary" id="surpriseBtn">🎁 Ouvrir ma surprise</button>
+        <button class="secondary" id="musicBtn" aria-pressed="false">🎵 Lancer la musique</button>
+      </div>
+      <p class="hint">Monte un peu le son, puis ouvre ta surprise… 💕</p>
+    </section>
+
+    <section class="card" id="letterCard">
+      <h2>💌 Un message du cœur</h2>
+      <div class="letter" id="letter">
+        En ce jour spécial, je veux te souhaiter bien plus qu'un simple joyeux anniversaire.
+
+        Je te souhaite une vie remplie de paix, de santé, de belles surprises et de rêves qui deviennent réalité. Que chaque nouvelle journée t'apporte une raison de sourire, des personnes sincères autour de toi et la force de continuer à croire en ce qui te rend heureuse.
+
+        Merci d'être cette personne unique, avec ta façon d'être et la lumière que tu apportes autour de toi. N'oublie jamais que tu mérites le respect, la douceur, la joie et tout le bien que la vie peut offrir.
+
+        Que cette nouvelle année de ta vie soit encore plus belle que la précédente. Continue de briller à ta manière, de rire de bon cœur et de poursuivre tes rêves.
+
+        <strong>Joyeux anniversaire, ma personne spéciale. Que le bonheur t'accompagne aujourd'hui et tout au long de l'année. 💖🎂</strong>
+        <div class="signature">Avec beaucoup d'affection 💗</div>
+      </div>
+      <p class="small-note" id="closedHint">Le message attend juste que tu ouvres la surprise. 😊</p>
+    </section>
+
+    <section class="card">
+      <h2>🌟 Un vœu pour toi</h2>
+      <p style="line-height:1.8;margin-bottom:0">
+        Ferme les yeux quelques secondes, fais un vœu et rappelle-toi que les plus belles choses peuvent encore t'attendre. Que cette journée soit pleine de sourires, de douceur et de moments inoubliables. 🦋
+      </p>
+    </section>
+    <div class="footer">Fait avec 💖 spécialement pour toi</div>
+  </main>
+
+  <script>
+    // PERSONNALISATION : remplace le texte entre guillemets par son prénom ou surnom.
+    const PRENOM = "Ma personne spéciale";
+
+    // MUSIQUE : pour utiliser un fichier audio, ajoute un fichier nommé "musique.mp3"
+    // dans le même dossier que ce fichier HTML. Le bouton jouera ce fichier.
+    const AUDIO_FICHIER = "musique.mp3";
+
+    const nameHeading = document.getElementById("nameHeading");
+    const surpriseBtn = document.getElementById("surpriseBtn");
+    const musicBtn = document.getElementById("musicBtn");
+    const letter = document.getElementById("letter");
+    const closedHint = document.getElementById("closedHint");
+    const audio = new Audio(AUDIO_FICHIER);
+    audio.loop = true;
+    audio.preload = "none";
+
+    nameHeading.textContent = PRENOM;
+    document.title = "Joyeux anniversaire " + PRENOM + " 🎂";
+
+    surpriseBtn.addEventListener("click", () => {
+      letter.classList.add("show");
+      closedHint.style.display = "none";
+      surpriseBtn.textContent = "💖 Surprise ouverte !";
+      surpriseBtn.disabled = true;
+      launchBalloons(24);
+      document.getElementById("letterCard").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    musicBtn.addEventListener("click", async () => {
+      if (audio.paused) {
+        try {
+          await audio.play();
+          musicBtn.textContent = "⏸️ Mettre la musique en pause";
+          musicBtn.setAttribute("aria-pressed", "true");
+        } catch (error) {
+          alert("Ajoute un fichier audio nommé musique.mp3 dans le même dossier que index.html, puis réessaie. Le navigateur a besoin d'un fichier audio valide.");
+        }
+      } else {
+        audio.pause();
+        musicBtn.textContent = "🎵 Reprendre la musique";
+        musicBtn.setAttribute("aria-pressed", "false");
+      }
+    });
+
+    function launchBalloons(count) {
+      const emojis = ["🎈", "💖", "🎉", "✨", "🌸", "💗"];
+      for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+          const el = document.createElement("div");
+          el.className = "balloon";
+          el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+          el.style.left = Math.random() * 94 + "vw";
+          el.style.animationDuration = (5 + Math.random() * 5) + "s";
+          el.style.fontSize = (1.4 + Math.random() * 1.8) + "rem";
+          document.body.appendChild(el);
+          setTimeout(() => el.remove(), 11000);
+        }, i * 100);
+      }
+    }
+
+    // Quelques petites étoiles apparaissent au chargement.
+    for (let i = 0; i < 12; i++) {
+      setTimeout(() => {
+        const s = document.createElement("div");
+        s.className = "sparkle";
+        s.textContent = ["✨", "⭐", "💫"][i % 3];
+        s.style.left = (5 + Math.random() * 90) + "vw";
+        s.style.top = (5 + Math.random() * 85) + "vh";
+        document.body.appendChild(s);
+        setTimeout(() => s.remove(), 1400);
+      }, i * 170);
+    }
+  </script>
+</body>
+</html>
